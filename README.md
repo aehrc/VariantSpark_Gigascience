@@ -9,6 +9,7 @@ we use [CreateCluster.sh](scripts/CreateCluster.sh) bash scrtip to create an EMR
 - Without EC2 keypair
 - Master EC2 instance type: **r4.2xlarge** 8 vCPUs 61GB RAM
 - Core EC2 instance type: **r4.4xlarge** 16 vCPUs 122GB RAM
+- VariantSpark installed (through Bootstrap)
 
 If you would like to change the above configuration (i.e. if you want to use OnDemand pricing or SpotFleet), you may create this cluster and then clone it in the aws console and change the parameter there.
 
@@ -27,18 +28,19 @@ You should install and configure awscli v2 on your machine (https://docs.aws.ama
 We have used [SimulateData.sh](scripts/VSdata/SimulateData.sh) to create synthetic genotypes and phenotype using VariantSpark _gen-features_ and _gen-labels_ commands.
 
 We have consider diffeerent number of samples and SNPs in the dataset.
--Samples: 1,000 - 10,000 - 100,000 (1K, 10K, 100K)
--SNPs: 100,000 - 1,000,000 - 10,000,000 - 100,000,000 (100K, 1M, 10M, 100M)
 
-we ignore the dataset with 100K samples and 100M snps as its size were exteremly large.
+- Samples: 1,000 - 10,000 - 100,000 (1K, 10K, 100K)
+- SNPs: 100,000 - 1,000,000 - 10,000,000 - 100,000,000 (100K, 1M, 10M, 100M)
 
-Unfortunately _gen-features_ and _gen-labels_ does not work in the latest version of VariantSpark. Follow the instruction here: https://github.com/aehrc/VIGWAS/blob/master/Instructions/AWS_Instruction.pdf to create an EC2 instance with proper version of VariantSpark installed use r4.16xlarge instance and allocage 1000GB EBS volume. Then run this script on that EC2 instance.
+We ignore the dataset with 100K samples and 100M snps as its size were exteremly large.
+
+Unfortunately _gen-features_ and _gen-labels_ does not work in the latest version of VariantSpark. Follow the instruction [here](https://github.com/aehrc/VIGWAS/blob/master/Instructions/AWS_Instruction.pdf) to create an EC2 instance with proper version of VariantSpark installed use r4.16xlarge instance and allocage 1000GB EBS volume. Then run this script on that EC2 instance.
 
 **Parameters:** You should modify the script and manually change this parameter:
 
 -S3: Path to S3 folder (or bucket) to store results.
 
-Genotype data are generated using VariantSpark _gen-features_ command in _parquet_ format.
+Genotype data are generated using VariantSpark _gen-features_ command in _parquet_ format. Randomly generated from a uniform distribution with equal probabilities (0, 1 and 2 represent 0/0, 0/1 and 1/1 genotypes respectively).
 
 - SNP id: v_0 ... v_n
 - Sample id: s_0 ... s_m
@@ -57,3 +59,35 @@ The phenotype file columns are:
 The script also store all simulation logs to the S3 path.
 
 ## VSdata: convert parquet file to csv.bz2
+
+## VSdata: Process data with VariantSpark
+
+[ProcessData.sh](scripts/VSdata/ProcessData.sh) run variant spark with different parameters on different dataset generated above. It consist of 7 sets of experiments E0 to E6
+
+This scipt add jobs as steps to the existing cluster. See above to learn how to create a cluster.
+
+**Parameters:** You should modify the script and manually change these parameters:
+
+- S3: Path to S3 folder (or Bucket) where dataset is stored (leave to to as it is if you wish to process dataset we have generated)
+- S3R: Path to S3 folder (or Bucket) to store Results
+- clusterID: the cluster id ("j-XXXXXXXXXXXXX") you get when you generate the cluster. You can also find cluster ID in aws EMR console
+
+Default parameters and dataset:
+
+- numTree=1000 (number of trees)
+- mtryFraction="0.1" (mtry as fraction of number of SNPs)
+- maxDepth=15 (max depth of tree)
+- minSample=50 (min number of samples in node to be divided)
+- batchSize=100 (number of tree to grow in parallel)
+- numVariant=1,000,000 (dataset number of SNPs)
+- numSample=10,000 (dataset number of samples)
+
+Experiments:
+
+- E0: run variantSpark with unlimited maxDepth and minSample=0 (split nodes until they get pure)
+- E1: Vary maxDepth [3 5 7 9 11 13 15 20 25 100](minSample=0)
+- E2: Vary minSample [5 10 50 100 500 1000] (unlimited maxDepth)
+- E3: Vary number of Trees [100 200 400 800 1600]
+- E4: Vary batchSize [10 50 100 500 1000]
+- E5: Vary mtry [10000 5000 1000 500 100 50 10] note that mtry=10,000 is equivalent to mtryFraction=0.1 for this dataset with 1000,000 SNPs and mtry=1000 is the default mtry (sqrt(1,000,000))
+- E6: Vary dataset [all generated dataset]. For the 2 largest generated datasets (100K sample 10M SNPs) and (10K samples 100M SNPs) we set the number of tree to 100 due to excesive computational time.
