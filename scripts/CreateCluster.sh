@@ -1,5 +1,6 @@
 ClusterName="C128" #options: C32, C64, C128, C256, C512, C1024
 InstanceCount=8    #options: 2  , 4  , 8   , 16  , 32  , 64
+
 # Each instance count as 16 CPU
 LogURI=s3n://variant-spark/GigaScience/EMR-LOG/
 
