@@ -5,6 +5,10 @@ from os import path
 import gzip
 import re
 import csv
+import subprocess
+import json
+
+from GetRFstat import analyse_trees
 
 
 def fetchData(bucketName,bucketpath,clusterid,tempdir):
@@ -27,14 +31,18 @@ def extractInfo(tmppath):
         if(step.find(".")>-1):
             continue
         ############## Controller
-        f=gzip.open(tmppath+"/"+step+"/controller.gz",'rb').read().decode('utf-8')
+        try:
+            f=gzip.open(tmppath+"/"+step+"/controller.gz",'rb').read().decode('utf-8')
+        except:
+            print ("ERROR: file not found", tmppath+"/"+step+"/controller.gz")
+            ar=[step,["NA"]*15]
+            continue
         ar=[step]
         for i in ["-sp ","-sr ","-rn ","-rbs ", "-rmt ", "-rmtf ", "-it ","-if ","-fc ","-ff ","-of ","-on ","-om ","-omf ","step "]:
             try:
                 ar.append(re.split('[ \']',f.split(i)[1])[0])
             except:
                 ar.append("NA")
-        print (ar)
         #sample number and SNP number
         try:
             ff=ar[10].split(".")
@@ -42,7 +50,12 @@ def extractInfo(tmppath):
         except:
             ar.extend(["NA","NA"])
         ############## Stdout
-        f=gzip.open(tmppath+"/"+step+"/stdout.gz",'rb').read().decode('utf-8')
+        try:
+            f=gzip.open(tmppath+"/"+step+"/stdout.gz",'rb').read().decode('utf-8')
+        except:
+            print ("ERROR: file not found", tmppath+"/"+step+"/controller.gz")
+            ar=[step,["NA"]*15]
+            continue
         t=f.split("took: ")
         try: #load runtime
             ar.append(t[1].split("\n")[0])
@@ -60,43 +73,50 @@ def extractInfo(tmppath):
         clusterinfo.append(ar)
     return clusterinfo
 
-def getTopLine(pheno):
+def getTopLine(pheno,vsis):
     with open(pheno, newline='') as f:
         reader = csv.reader(f)
         row1 = next(reader)[3:8]  # gets the first line
-        return ([ int(x.strip("v_")) for x in row1 ])
+#        return ([ int(x.strip("v_")) for x in row1 ])
+    ar=[]
+    for i in row1:
+        stdot=subprocess.Popen("grep -wn "+i+" "+vsis, shell=True, stdout=subprocess.PIPE).stdout.read().decode('utf-8')
+        try:
+            ar.append(int(stdot.split(":")[0]))
+        except:
+            ar.append(-1)
+    return ar
 
+
+def extractNdownload(step,l,to,tmppath):
+    s3 = boto3.client('s3')
+    ar=step[l].split("/")
+    bucketName=ar[2]
+    ffin="/".join(ar[3:to+1])
+    ffout=tmppath+"/"+step[0]+"/"+ar[to]
+    try:
+        if (os.path.exists(ffout)==False):
+            print("download",ffin,"to",ffout)
+            s3.download_file(bucketName, ffin, ffout)
+        return ffout
+    except:
+        print ("ERROR: S3 file not found ",ffin)
+        return None
 
 def calculateInfo(clusterinfo,tmppath):
 
-    s3 = boto3.client('s3')
+    print ("Downloading result files from S3")
     for i in clusterinfo:
-#        print (i[10], tmppath+"/"+i[0]+"/")
-        # ff phenotype
-        ar=i[10].split("/")
-        bucketName=ar[2]
-        ffin="/".join(ar[3:7])
-        ffout=tmppath+"/"+i[0]+"/"+ar[6]
-        #of
-        ar=i[11].split("/")
-        ofin="/".join(ar[3:8])
-        ofout=tmppath+"/"+i[0]+"/"+ar[7]
-        # om
-        ar=i[13].split("/")
-        omin="/".join(ar[3:8])
-        omout=tmppath+"/"+i[0]+"/"+ar[7]
-        if (os.path.exists(ffout)==False):
-            print(ffin,ffout)
-            s3.download_file(bucketName, ffin, ffout)
-        #if (os.path.exists(ofout)==False):
-        #    print(ofin,ofout)
-        #    s3.download_file(bucketName, ofin, ofout)
-        #if (os.path.exists(omout)==False):
-        #    print(omin,omout)
-        #    s3.download_file(bucketName, omin, omout)
+        ff=extractNdownload(i,10,6,tmppath)
+        of=extractNdownload(i,11,6,tmppath)
+        om=extractNdownload(i,13,6,tmppath)
 
-        truthsVariables=getTopLine(ffout)
-        print(truthsVariables)
+        #truthsVariables=getTopLine(ff,of)
+        #i.extend(truthsVariables)
+        with open(om, 'r') as json_file:
+            full_data = json.load(json_file)
+        ar=analyse_trees(full_data['trees'],False)
+        print (ar)
 
 
 def writeCSV(outfile):
@@ -117,4 +137,4 @@ if __name__=="__main__":
     clusterinfo=extractInfo(args.tempdir+"/"+args.clusterid+"/steps")
     clusterinfoext=calculateInfo(clusterinfo,args.tempdir+"/"+args.clusterid+"/steps")
     #writeCSV(args.outprefix+args.clusterid)
-    print (clusterinfo)
+    #print (clusterinfo)
