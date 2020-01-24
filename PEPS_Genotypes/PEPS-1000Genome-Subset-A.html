@@ -13088,7 +13088,8 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">numCPU</span><span class="o">=</span><span class="mi">128</span>
 <span class="n">numPartition</span><span class="o">=</span><span class="n">numCPU</span><span class="o">*</span><span class="mi">2</span>
-<span class="n">DIR</span><span class="o">=</span><span class="s1">&#39;path to s3 folder to store data&#39;</span>
+<span class="n">DIR</span><span class="o">=</span><span class="s1">&#39;s3://variant-spark/GigaScience/Data/PEPS_Genotypes/&#39;</span>
+<span class="n">OUTPUT</span><span class="o">=</span><span class="n">DIR</span><span class="o">+</span><span class="s1">&#39;PEPS-1000Genome-Subset-A&#39;</span>
 </pre></div>
 
     </div>
@@ -13913,7 +13914,7 @@ Welcome to
 <div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">vds</span><span class="o">.</span><span class="n">export_vcf</span><span class="p">(</span><span class="n">DIR</span><span class="o">+</span><span class="s1">&#39;PEPS-1000Genome-Subset-A.vcf.bgz&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">vds</span><span class="o">.</span><span class="n">export_vcf</span><span class="p">(</span><span class="n">OUTPUT</span><span class="p">)</span>
 </pre></div>
 
     </div>
