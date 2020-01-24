@@ -14,7 +14,7 @@ def recurse_branch(tree):
         return 0, 1, 0
 
 
-def analyse_trees(trees):
+def analyse_trees(trees, printToStdout):
     """Prints summary data on trees."""
     num_trees = float(len(trees))  # float to ensure non-integer division
     sum_deepest = 0
@@ -28,16 +28,17 @@ def analyse_trees(trees):
     average_tree_depth = sum_deepest / num_trees
     average_branch_depth = float(sum_depths) / sum_leaves
     average_leaves = sum_leaves / num_trees
-    print('\n'.join([
-        "Average tree depth: " + str(average_tree_depth),
-        "Average branch depth: " + str(average_branch_depth),
-        "Average leaves per tree: " + str(average_leaves),
-        "Average nodes per tree: " + str(average_leaves - 1),
-    ]))
+    if printToStdout:
+        print('\n'.join([
+            "Average tree depth: " + str(average_tree_depth),
+            "Average branch depth: " + str(average_branch_depth),
+            "Average leaves per tree: " + str(average_leaves),
+            "Average nodes per tree: " + str(average_leaves - 1),
+        ]))
+    return [average_tree_depth,average_branch_depth,average_leaves,average_leaves - 1]
 
 
 if __name__ == '__main__':
     with open(sys.argv[1], 'r') as json_file:
         full_data = json.load(json_file)
-    analyse_trees(full_data['trees'])
-
+    analyse_trees(full_data['trees'],True)
