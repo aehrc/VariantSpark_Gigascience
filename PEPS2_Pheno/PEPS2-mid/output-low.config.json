@@ -1,0 +1,39 @@
+{
+    "dumpCSV": false,
+    "inputPrefix": "../PEPS_Genotypes/PEPS-1000Genome-Subset-B",
+    "inputType": "csv",
+    "maxOrder": 5,
+    "numSnpsNeeded": 37,
+    "numTree": 500,
+    "numVariables": 16,
+    "outputPrefix": "PEPS2-mid/output-low",
+    "seed": "13",
+    "shuffleSnps": true,
+    "variables": [
+        {
+            "numSNPs": 5,
+            "numSnpsInVar": 1,
+            "numVar": 5
+        },
+        {
+            "numSNPs": 10,
+            "numSnpsInVar": 2,
+            "numVar": 5
+        },
+        {
+            "numSNPs": 9,
+            "numSnpsInVar": 3,
+            "numVar": 3
+        },
+        {
+            "numSNPs": 8,
+            "numSnpsInVar": 4,
+            "numVar": 2
+        },
+        {
+            "numSNPs": 5,
+            "numSnpsInVar": 5,
+            "numVar": 1
+        }
+    ]
+}
