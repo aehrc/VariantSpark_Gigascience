@@ -254,12 +254,12 @@ do
 
 		if [[ numSample -gt 10000 ]]
 		then
-			batchSize=10
+			batchSize=5
 		fi
 
 		if [[ size -gt 100000000000 ]]
 		then
-			numTree=100
+			numTree=50
 		fi
 
 		if [[ size -gt 1000000000000 ]]
