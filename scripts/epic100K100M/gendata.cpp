@@ -26,9 +26,9 @@ int rnd;
 
 int main(int argc, char *argv[])
 {
-    if (argc != 6)
+    if (argc != 8)
     {
-        printf("usage %s numSample batchSize numBatch varNamelen seed\n", argv[0]);
+        printf("usage %s numSample batchSize numBatch varNamelen seed rate outFile\n", argv[0]);
         return 0;
     }
     uint32 numSample = atoi(argv[1]);
@@ -36,6 +36,11 @@ int main(int argc, char *argv[])
     uint32 numBatch = atoi(argv[3]);
     uint32 varNameLen = atoi(argv[4]);
     uint32 seed = atoi(argv[5]);
+    uint32 rate = (atof(argv[6]) * 100000);
+    char *outFile = argv[7];
+
+    FILE *of = fopen(outFile, "wb");
+    NULL_CHECK(of);
 
     srand(seed);
     rnd = 0;
@@ -45,9 +50,14 @@ int main(int argc, char *argv[])
 
     // Write Header (sample ids)
     printf("varSam");
+    fprintf(of, "varSam");
     for (uint32 i = 0; i < numSample; i++)
+    {
         printf(",s_%u", i);
+        fprintf(of, ",s_%u", i);
+    }
     printf("\n");
+    fprintf(of, "\n");
 
     // Allocate Data
     char *data = new char[batchSize * numSample];
@@ -126,6 +136,9 @@ int main(int argc, char *argv[])
         }
         // Write batch
         fwrite(csv, 1, (batchSize * csvLineSize), stdout);
+        // Write fraction of batches to output file
+        if ((random() % 100000) < rate)
+            fwrite(csv, 1, (batchSize * csvLineSize), of);
     }
     return 0;
 }

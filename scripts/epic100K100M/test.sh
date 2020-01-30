@@ -2,7 +2,8 @@
 
 g++ -O3 gendata.cpp -o gendata
 
-./gendata 1000 1000 1000 15 123 | pv | pbzip2 -p8 > output.csv.bz2
+./gendata 1000 100 100 15 123 0.05 output.5Percent.csv | pv | pbzip2 -p2 > output.csv.bz2
+pbzip2 -p2 output.5Percent.csv
 
 # too see how fast it is
-#./gendata 1000 1000 1000 15 123 | pv | wc -l
+#./gendata 1000 100 100 15 123 0.05 output.5Percent.csv | pv | wc -l
