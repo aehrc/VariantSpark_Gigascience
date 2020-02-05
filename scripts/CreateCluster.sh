@@ -1,5 +1,5 @@
-ClusterName="C32 bioSpark v1.0.1" #options: C32, C64, C128, C256, C512, C1024
-InstanceCount="2"                 #options: 2  , 4  , 8   , 16  , 32  , 64    # Each instance count as 16 CPU
+ClusterName="C256 bioSpark v1.0.1" #options: C32, C64, C128, C256, C512, C1024
+InstanceCount="16"                 #options: 2  , 4  , 8   , 16  , 32  , 64    # Each instance count as 16 CPU
 LogURI=s3n://variant-spark/GigaScience/EMR-LOG/
 
 # Do not change below lines

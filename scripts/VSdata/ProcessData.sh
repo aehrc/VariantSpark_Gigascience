@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Create a C256 EMR Cluster and copy the cluster ID below
-clusterID="j-XXXXXXXXXXXXX"
+clusterID="j-LRETSJHUWV40"
 
 sparkParallel=512
 MEM=60g
 S3=s3://variant-spark/GigaScience/Data/VSdata/
-S3R=s3://variant-spark/GigaScience/Data/VSdataResult/
+S3R=s3://variant-spark/GigaScience/Data/Results/
 
 ################################
 ##### E0: pretty default
@@ -257,9 +257,14 @@ do
 			batchSize=5
 		fi
 
+		if [[ size -gt 10000000000 ]]
+		then
+			numTree=100
+		fi
+
 		if [[ size -gt 100000000000 ]]
 		then
-			numTree=50
+			numTree=20
 		fi
 
 		if [[ size -gt 1000000000000 ]]
