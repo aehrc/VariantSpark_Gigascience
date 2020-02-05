@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create a C256 EMR Cluster and copy the cluster ID below
-clusterID="j-LRETSJHUWV40"
+clusterID="j-XXXXXXXXXXXXX"
 
 sparkParallel=512
 MEM=60g
@@ -12,7 +12,7 @@ S3R=s3://variant-spark/GigaScience/Data/Results/
 ##### E0: pretty default
 ################################
 experiment="E0"
-numTree=1000
+numTree=500
 mtryFraction="0.1"
 #maxDepth=NA
 #minSample=NA
@@ -34,7 +34,7 @@ numSample=10000
 	echo "output: " $prefixOut
 	echo "-------------------------"
 
-	JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmtf","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
+	JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\\"defVariableType\\":\\"ORDINAL(3)\\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmtf","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
 
 	step=$(printf "$JSON_FMT" "$sparkParallel" "$seed" "$numTree" "$batchSize" "$mtryFraction" "$S3$prefix.csv.bz2" "$S3$prefix.pheno.no_.csv" "$S3R$prefixOut.vsis.csv" "$S3R$prefixOut.rf.json" "$prefixOut")
 
@@ -49,7 +49,7 @@ numSample=10000
 ##### E1: The Effect of maxDepth
 ################################
 experiment="E1"
-numTree=1000
+numTree=500
 mtryFraction="0.1"
 #maxDepth=X
 #minSample=NA
@@ -71,7 +71,7 @@ do
 	echo "output: " $prefixOut
 	echo "-------------------------"
 
-	JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmtf","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json","-rmd","%s"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
+	JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\\"defVariableType\\":\\"ORDINAL(3)\\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmtf","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json","-rmd","%s"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
 
 	step=$(printf "$JSON_FMT" "$sparkParallel" "$seed" "$numTree" "$batchSize" "$mtryFraction" "$S3$prefix.csv.bz2" "$S3$prefix.pheno.no_.csv" "$S3R$prefixOut.vsis.csv" "$S3R$prefixOut.rf.json" "$maxDepth" "$prefixOut")
 
@@ -86,7 +86,7 @@ done
 ##### E2: The Effet of minimum number of samples in a node to be splited
 ################################
 experiment="E2"
-numTree=1000
+numTree=500
 mtryFraction="0.1"
 #maxDepth=NA
 #minSample=X
@@ -108,7 +108,7 @@ do
 	echo "output: " $prefixOut
 	echo "-------------------------"
 
-	JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmtf","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json","-rmns","%s"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
+	JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\\"defVariableType\\":\\"ORDINAL(3)\\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmtf","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json","-rmns","%s"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
 
 	step=$(printf "$JSON_FMT" "$sparkParallel" "$seed" "$numTree" "$batchSize" "$mtryFraction" "$S3$prefix.csv.bz2" "$S3$prefix.pheno.no_.csv" "$S3R$prefixOut.vsis.csv" "$S3R$prefixOut.rf.json" "$minSample" "$prefixOut")
 
@@ -145,7 +145,7 @@ do
 	echo "output: " $prefixOut
 	echo "-------------------------"
 
-	JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmtf","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json","-rmns","%s","-rmd","%s"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
+	JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\\"defVariableType\\":\\"ORDINAL(3)\\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmtf","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json","-rmns","%s","-rmd","%s"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
 
 	step=$(printf "$JSON_FMT" "$sparkParallel" "$seed" "$numTree" "$batchSize" "$mtryFraction" "$S3$prefix.csv.bz2" "$S3$prefix.pheno.no_.csv" "$S3R$prefixOut.vsis.csv" "$S3R$prefixOut.rf.json" "$minSample" "$maxDepth" "$prefixOut")
 
@@ -160,7 +160,7 @@ done
 ##### E4: The Effect of batchSize
 ################################
 experiment="E4"
-numTree=1000
+numTree=500
 mtryFraction="0.1"
 maxDepth=15
 minSample=50
@@ -168,7 +168,7 @@ minSample=50
 numVariant=1000000
 numSample=10000
 
-for batchSize in 10 50 100 500 1000
+for batchSize in 10 50 100 500
 do
 	echo "========================="
 
@@ -182,7 +182,7 @@ do
 	echo "output: " $prefixOut
 	echo "-------------------------"
 
-	JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmtf","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json","-rmns","%s","-rmd","%s"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
+	JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\\"defVariableType\\":\\"ORDINAL(3)\\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmtf","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json","-rmns","%s","-rmd","%s"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
 
 	step=$(printf "$JSON_FMT" "$sparkParallel" "$seed" "$numTree" "$batchSize" "$mtryFraction" "$S3$prefix.csv.bz2" "$S3$prefix.pheno.no_.csv" "$S3R$prefixOut.vsis.csv" "$S3R$prefixOut.rf.json" "$minSample" "$maxDepth" "$prefixOut")
 
@@ -197,7 +197,7 @@ done
 ##### E5: The Effect of mtry
 ################################
 experiment="E5"
-numTree=1000
+numTree=500
 #mtry=X
 maxDepth=15
 minSample=50
@@ -219,7 +219,7 @@ do
 	echo "output: " $prefixOut
 	echo "-------------------------"
 
-	JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmt","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json","-rmns","%s","-rmd","%s"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
+	JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\\"defVariableType\\":\\"ORDINAL(3)\\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmt","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json","-rmns","%s","-rmd","%s"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
 
 	step=$(printf "$JSON_FMT" "$sparkParallel" "$seed" "$numTree" "$batchSize" "$mtry" "$S3$prefix.csv.bz2" "$S3$prefix.pheno.no_.csv" "$S3R$prefixOut.vsis.csv" "$S3R$prefixOut.rf.json" "$minSample" "$maxDepth" "$prefixOut")
 
@@ -234,7 +234,7 @@ done
 ##### E6: The Effect of numSamples and Variants. (The 3 Biggest datasets are not processed)
 ################################
 experiment="E6"
-numTree=1000 # reduce to 100 for larger datasets
+numTree=500 # reduce to 100 for larger datasets
 mtryFraction="0.1"
 maxDepth=15
 minSample=50
@@ -254,16 +254,18 @@ do
 
 		if [[ numSample -gt 10000 ]]
 		then
-			batchSize=5
+			batchSize=10
 		fi
 
 		if [[ size -gt 10000000000 ]]
 		then
+			batchSize=10
 			numTree=100
 		fi
 
 		if [[ size -gt 100000000000 ]]
 		then
+			batchSize=5
 			numTree=20
 		fi
 
@@ -276,7 +278,7 @@ do
 			echo "output: " $prefixOut
 			echo "-------------------------"
 
-			JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmtf","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json","-rmns","%s","-rmd","%s"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
+			JSON_FMT='[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\\"defVariableType\\":\\"ORDINAL(3)\\"}","-sp","%s","-sr","%s","-v","-ro","-rn","%s","-rbs","%s","-rmtf","%s","-it","csv","-if","%s","-fc","lable","-ff","%s","-of","%s","-on","1000000","-om","%s","-omf","json","-rmns","%s","-rmd","%s"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"%s"}]'
 
 			step=$(printf "$JSON_FMT" "$sparkParallel" "$seed" "$numTree" "$batchSize" "$mtryFraction" "$S3$prefix.csv.bz2" "$S3$prefix.pheno.no_.csv" "$S3R$prefixOut.vsis.csv" "$S3R$prefixOut.rf.json" "$minSample" "$maxDepth" "$prefixOut")
 

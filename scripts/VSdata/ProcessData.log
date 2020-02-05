@@ -1,0 +1,520 @@
+=========================
+seed:  12345
+output:  E0
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","12345","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E0.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E0.rf.json","-omf","json"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E0"}]
+-------------------------
+{
+    "StepIds": [
+        "s-2ZQ3D82ZUGG2E"
+    ]
+}
+=========================
+seed:  369
+output:  E1.rmd003
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","369","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E1.rmd003.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E1.rmd003.rf.json","-omf","json","-rmd","3"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E1.rmd003"}]
+-------------------------
+{
+    "StepIds": [
+        "s-1K48K5JXE4165"
+    ]
+}
+=========================
+seed:  615
+output:  E1.rmd005
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","615","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E1.rmd005.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E1.rmd005.rf.json","-omf","json","-rmd","5"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E1.rmd005"}]
+-------------------------
+{
+    "StepIds": [
+        "s-3S3TH8AAUMVAX"
+    ]
+}
+=========================
+seed:  861
+output:  E1.rmd007
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","861","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E1.rmd007.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E1.rmd007.rf.json","-omf","json","-rmd","7"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E1.rmd007"}]
+-------------------------
+{
+    "StepIds": [
+        "s-3T9Q4JOC398B2"
+    ]
+}
+=========================
+seed:  1107
+output:  E1.rmd009
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","1107","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E1.rmd009.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E1.rmd009.rf.json","-omf","json","-rmd","9"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E1.rmd009"}]
+-------------------------
+{
+    "StepIds": [
+        "s-19LDMKTPO4XZR"
+    ]
+}
+=========================
+seed:  1353
+output:  E1.rmd011
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","1353","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E1.rmd011.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E1.rmd011.rf.json","-omf","json","-rmd","11"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E1.rmd011"}]
+-------------------------
+{
+    "StepIds": [
+        "s-1F4EVV8AC33VJ"
+    ]
+}
+=========================
+seed:  1599
+output:  E1.rmd013
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","1599","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E1.rmd013.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E1.rmd013.rf.json","-omf","json","-rmd","13"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E1.rmd013"}]
+-------------------------
+{
+    "StepIds": [
+        "s-2GJQN91TTZ82T"
+    ]
+}
+=========================
+seed:  1845
+output:  E1.rmd015
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","1845","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E1.rmd015.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E1.rmd015.rf.json","-omf","json","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E1.rmd015"}]
+-------------------------
+{
+    "StepIds": [
+        "s-1RY5OOBLBXV4O"
+    ]
+}
+=========================
+seed:  2460
+output:  E1.rmd020
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","2460","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E1.rmd020.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E1.rmd020.rf.json","-omf","json","-rmd","20"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E1.rmd020"}]
+-------------------------
+{
+    "StepIds": [
+        "s-Z7IVCM5AESGE"
+    ]
+}
+=========================
+seed:  3075
+output:  E1.rmd025
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","3075","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E1.rmd025.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E1.rmd025.rf.json","-omf","json","-rmd","25"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E1.rmd025"}]
+-------------------------
+{
+    "StepIds": [
+        "s-30W1BRPI0SDOV"
+    ]
+}
+=========================
+seed:  12300
+output:  E1.rmd100
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","12300","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E1.rmd100.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E1.rmd100.rf.json","-omf","json","-rmd","100"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E1.rmd100"}]
+-------------------------
+{
+    "StepIds": [
+        "s-3R47RTBYI309G"
+    ]
+}
+=========================
+seed:  1605
+output:  E2.rmns0005
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","1605","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E2.rmns0005.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E2.rmns0005.rf.json","-omf","json","-rmns","5"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E2.rmns0005"}]
+-------------------------
+{
+    "StepIds": [
+        "s-1JZMHJQ8X560Z"
+    ]
+}
+=========================
+seed:  3210
+output:  E2.rmns0010
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","3210","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E2.rmns0010.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E2.rmns0010.rf.json","-omf","json","-rmns","10"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E2.rmns0010"}]
+-------------------------
+{
+    "StepIds": [
+        "s-3GMO65ME47K0K"
+    ]
+}
+=========================
+seed:  16050
+output:  E2.rmns0050
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","16050","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E2.rmns0050.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E2.rmns0050.rf.json","-omf","json","-rmns","50"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E2.rmns0050"}]
+-------------------------
+{
+    "StepIds": [
+        "s-2HFPZOEFV0XWJ"
+    ]
+}
+=========================
+seed:  32100
+output:  E2.rmns0100
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","32100","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E2.rmns0100.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E2.rmns0100.rf.json","-omf","json","-rmns","100"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E2.rmns0100"}]
+-------------------------
+{
+    "StepIds": [
+        "s-13FRPSN2E04V3"
+    ]
+}
+=========================
+seed:  160500
+output:  E2.rmns0500
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","160500","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E2.rmns0500.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E2.rmns0500.rf.json","-omf","json","-rmns","500"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E2.rmns0500"}]
+-------------------------
+{
+    "StepIds": [
+        "s-2WT0XD68ILEU"
+    ]
+}
+=========================
+seed:  321000
+output:  E2.rmns1000
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","321000","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E2.rmns1000.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E2.rmns1000.rf.json","-omf","json","-rmns","1000"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E2.rmns1000"}]
+-------------------------
+{
+    "StepIds": [
+        "s-7C5YDZXJLP6R"
+    ]
+}
+=========================
+seed:  0
+output:  E3.rn0100
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","0","-v","-ro","-rn","100","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E3.rn0100.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E3.rn0100.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E3.rn0100"}]
+-------------------------
+{
+    "StepIds": [
+        "s-1DHARQ47B3S67"
+    ]
+}
+=========================
+seed:  0
+output:  E3.rn0200
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","0","-v","-ro","-rn","200","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E3.rn0200.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E3.rn0200.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E3.rn0200"}]
+-------------------------
+{
+    "StepIds": [
+        "s-85KRE78397LS"
+    ]
+}
+=========================
+seed:  0
+output:  E3.rn0400
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","0","-v","-ro","-rn","400","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E3.rn0400.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E3.rn0400.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E3.rn0400"}]
+-------------------------
+{
+    "StepIds": [
+        "s-2NZP0PDCJLTL8"
+    ]
+}
+=========================
+seed:  0
+output:  E3.rn0800
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","0","-v","-ro","-rn","800","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E3.rn0800.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E3.rn0800.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E3.rn0800"}]
+-------------------------
+{
+    "StepIds": [
+        "s-3EKZYATBG9WH6"
+    ]
+}
+=========================
+seed:  0
+output:  E3.rn1600
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","0","-v","-ro","-rn","1600","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E3.rn1600.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E3.rn1600.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E3.rn1600"}]
+-------------------------
+{
+    "StepIds": [
+        "s-21E9V9YQ6IM5B"
+    ]
+}
+=========================
+seed:  70
+output:  E4.rbs0010
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","70","-v","-ro","-rn","500","-rbs","10","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E4.rbs0010.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E4.rbs0010.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E4.rbs0010"}]
+-------------------------
+{
+    "StepIds": [
+        "s-FPTOKSXDN1H6"
+    ]
+}
+=========================
+seed:  350
+output:  E4.rbs0050
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","350","-v","-ro","-rn","500","-rbs","50","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E4.rbs0050.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E4.rbs0050.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E4.rbs0050"}]
+-------------------------
+{
+    "StepIds": [
+        "s-16GVL248NNTOQ"
+    ]
+}
+=========================
+seed:  700
+output:  E4.rbs0100
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","700","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E4.rbs0100.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E4.rbs0100.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E4.rbs0100"}]
+-------------------------
+{
+    "StepIds": [
+        "s-1XCUXJ0HPTDQB"
+    ]
+}
+=========================
+seed:  3500
+output:  E4.rbs0500
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","3500","-v","-ro","-rn","500","-rbs","500","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E4.rbs0500.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E4.rbs0500.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E4.rbs0500"}]
+-------------------------
+{
+    "StepIds": [
+        "s-TE8KWF0PKYLE"
+    ]
+}
+=========================
+seed:  210
+output:  E5.rmt00010
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","210","-v","-ro","-rn","500","-rbs","100","-rmt","10","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E5.rmt00010.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E5.rmt00010.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E5.rmt00010"}]
+-------------------------
+{
+    "StepIds": [
+        "s-21Q6K0QYR39BC"
+    ]
+}
+=========================
+seed:  1050
+output:  E5.rmt00050
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","1050","-v","-ro","-rn","500","-rbs","100","-rmt","50","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E5.rmt00050.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E5.rmt00050.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E5.rmt00050"}]
+-------------------------
+{
+    "StepIds": [
+        "s-2WS20T0NKT3UU"
+    ]
+}
+=========================
+seed:  2100
+output:  E5.rmt00100
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","2100","-v","-ro","-rn","500","-rbs","100","-rmt","100","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E5.rmt00100.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E5.rmt00100.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E5.rmt00100"}]
+-------------------------
+{
+    "StepIds": [
+        "s-U8K2VKNWTYLW"
+    ]
+}
+=========================
+seed:  10500
+output:  E5.rmt00500
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","10500","-v","-ro","-rn","500","-rbs","100","-rmt","500","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E5.rmt00500.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E5.rmt00500.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E5.rmt00500"}]
+-------------------------
+{
+    "StepIds": [
+        "s-AK17IHGVZRZ0"
+    ]
+}
+=========================
+seed:  21000
+output:  E5.rmt01000
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","21000","-v","-ro","-rn","500","-rbs","100","-rmt","1000","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E5.rmt01000.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E5.rmt01000.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E5.rmt01000"}]
+-------------------------
+{
+    "StepIds": [
+        "s-1INLZ7357S8LN"
+    ]
+}
+=========================
+seed:  105000
+output:  E5.rmt05000
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","105000","-v","-ro","-rn","500","-rbs","100","-rmt","5000","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E5.rmt05000.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E5.rmt05000.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E5.rmt05000"}]
+-------------------------
+{
+    "StepIds": [
+        "s-114HY7EQ4HTK8"
+    ]
+}
+=========================
+seed:  210000
+output:  E5.rmt10000
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","210000","-v","-ro","-rn","500","-rbs","100","-rmt","10000","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E5.rmt10000.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E5.rmt10000.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E5.rmt10000"}]
+-------------------------
+{
+    "StepIds": [
+        "s-2C0CWA76PSCXR"
+    ]
+}
+=========================
+seed:  810
+output:  E6.s001000.v000010000.rn0500.rbs100
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","810","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.1000.10000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.1000.10000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s001000.v000010000.rn0500.rbs100.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s001000.v000010000.rn0500.rbs100.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s001000.v000010000.rn0500.rbs100"}]
+-------------------------
+{
+    "StepIds": [
+        "s-2KP51OXDE1C0W"
+    ]
+}
+=========================
+seed:  8100
+output:  E6.s001000.v000100000.rn0500.rbs100
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","8100","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.1000.100000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.1000.100000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s001000.v000100000.rn0500.rbs100.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s001000.v000100000.rn0500.rbs100.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s001000.v000100000.rn0500.rbs100"}]
+-------------------------
+{
+    "StepIds": [
+        "s-1PX3TVDFDGNV7"
+    ]
+}
+=========================
+seed:  81004
+output:  E6.s001000.v001000000.rn0500.rbs100
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","81004","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.1000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.1000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s001000.v001000000.rn0500.rbs100.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s001000.v001000000.rn0500.rbs100.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s001000.v001000000.rn0500.rbs100"}]
+-------------------------
+{
+    "StepIds": [
+        "s-126J7D8GRUTT5"
+    ]
+}
+=========================
+seed:  810044
+output:  E6.s001000.v010000000.rn0500.rbs100
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","810044","-v","-ro","-rn","500","-rbs","100","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.1000.10000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.1000.10000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s001000.v010000000.rn0500.rbs100.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s001000.v010000000.rn0500.rbs100.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s001000.v010000000.rn0500.rbs100"}]
+-------------------------
+{
+    "StepIds": [
+        "s-3S10BAXFO4NC9"
+    ]
+}
+=========================
+seed:  8100445
+output:  E6.s001000.v100000000.rn0100.rbs010
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","8100445","-v","-ro","-rn","100","-rbs","10","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.1000.100000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.1000.100000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s001000.v100000000.rn0100.rbs010.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s001000.v100000000.rn0100.rbs010.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s001000.v100000000.rn0100.rbs010"}]
+-------------------------
+{
+    "StepIds": [
+        "s-6PRVO633F47W"
+    ]
+}
+=========================
+seed:  8100
+output:  E6.s010000.v000010000.rn0100.rbs010
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","8100","-v","-ro","-rn","100","-rbs","10","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.10000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.10000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s010000.v000010000.rn0100.rbs010.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s010000.v000010000.rn0100.rbs010.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s010000.v000010000.rn0100.rbs010"}]
+-------------------------
+{
+    "StepIds": [
+        "s-24FAIWSLYAN2H"
+    ]
+}
+=========================
+seed:  81004
+output:  E6.s010000.v000100000.rn0100.rbs010
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","81004","-v","-ro","-rn","100","-rbs","10","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.100000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.100000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s010000.v000100000.rn0100.rbs010.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s010000.v000100000.rn0100.rbs010.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s010000.v000100000.rn0100.rbs010"}]
+-------------------------
+{
+    "StepIds": [
+        "s-12SPHEGN8PTTJ"
+    ]
+}
+=========================
+seed:  810044
+output:  E6.s010000.v001000000.rn0100.rbs010
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","810044","-v","-ro","-rn","100","-rbs","10","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s010000.v001000000.rn0100.rbs010.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s010000.v001000000.rn0100.rbs010.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s010000.v001000000.rn0100.rbs010"}]
+-------------------------
+{
+    "StepIds": [
+        "s-1GTRL82X61JXA"
+    ]
+}
+=========================
+seed:  8100445
+output:  E6.s010000.v010000000.rn0100.rbs010
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","8100445","-v","-ro","-rn","100","-rbs","10","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.10000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.10000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s010000.v010000000.rn0100.rbs010.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s010000.v010000000.rn0100.rbs010.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s010000.v010000000.rn0100.rbs010"}]
+-------------------------
+{
+    "StepIds": [
+        "s-24F8BG1QR0BWQ"
+    ]
+}
+=========================
+seed:  81004455
+output:  E6.s010000.v100000000.rn0020.rbs005
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","81004455","-v","-ro","-rn","20","-rbs","5","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.100000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.10000.100000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s010000.v100000000.rn0020.rbs005.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s010000.v100000000.rn0020.rbs005.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s010000.v100000000.rn0020.rbs005"}]
+-------------------------
+{
+    "StepIds": [
+        "s-TV96QNKY4W0V"
+    ]
+}
+=========================
+seed:  81004
+output:  E6.s100000.v000010000.rn0020.rbs010
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","81004","-v","-ro","-rn","20","-rbs","10","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.100000.10000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.100000.10000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s100000.v000010000.rn0020.rbs010.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s100000.v000010000.rn0020.rbs010.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s100000.v000010000.rn0020.rbs010"}]
+-------------------------
+{
+    "StepIds": [
+        "s-1JK3UX8PPFT0"
+    ]
+}
+=========================
+seed:  810044
+output:  E6.s100000.v000100000.rn0020.rbs010
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","810044","-v","-ro","-rn","20","-rbs","10","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.100000.100000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.100000.100000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s100000.v000100000.rn0020.rbs010.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s100000.v000100000.rn0020.rbs010.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s100000.v000100000.rn0020.rbs010"}]
+-------------------------
+{
+    "StepIds": [
+        "s-2TAUGUK51DU8V"
+    ]
+}
+=========================
+seed:  8100445
+output:  E6.s100000.v001000000.rn0100.rbs010
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","8100445","-v","-ro","-rn","100","-rbs","10","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.100000.1000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.100000.1000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s100000.v001000000.rn0100.rbs010.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s100000.v001000000.rn0100.rbs010.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s100000.v001000000.rn0100.rbs010"}]
+-------------------------
+{
+    "StepIds": [
+        "s-3IUY393Z2TGED"
+    ]
+}
+=========================
+seed:  81004455
+output:  E6.s100000.v010000000.rn0020.rbs005
+-------------------------
+[{"Args":["spark-submit","--deploy-mode","client","--class","au.csiro.variantspark.cli.VariantSparkApp","/home/hadoop/biospark/lib/python3.6/site-packages/varspark/jars/variant-spark_2.11-0.3.0-SNAPSHOT-all.jar","importance","-io","{\"defVariableType\":\"ORDINAL(3)\"}","-sp","512","-sr","81004455","-v","-ro","-rn","20","-rbs","5","-rmtf","0.1","-it","csv","-if","s3://variant-spark/GigaScience/Data/VSdata/dataset.100000.10000000.csv.bz2","-fc","lable","-ff","s3://variant-spark/GigaScience/Data/VSdata/dataset.100000.10000000.pheno.no_.csv","-of","s3://variant-spark/GigaScience/Data/Results/E6.s100000.v010000000.rn0020.rbs005.vsis.csv","-on","1000000","-om","s3://variant-spark/GigaScience/Data/Results/E6.s100000.v010000000.rn0020.rbs005.rf.json","-omf","json","-rmns","50","-rmd","15"],"Type":"CUSTOM_JAR","ActionOnFailure":"CONTINUE","Jar":"command-runner.jar","Properties":"","Name":"E6.s100000.v010000000.rn0020.rbs005"}]
+-------------------------
+{
+    "StepIds": [
+        "s-HS8T7MXBVISM"
+    ]
+}
+=========================
+seed:  810044552
+Epic Dataset (100K samples and 100M SNPs = 10TB) is generated and processed using separate script
