@@ -41,7 +41,7 @@ numSample=10000
 	echo $step
 	echo "-------------------------"
 
-	aws emr add-steps --cluster-id $clusterID --steps $step
+	aws2 emr add-steps --cluster-id $clusterID --steps $step
 
 # done
 
@@ -78,7 +78,7 @@ do
 	echo $step
 	echo "-------------------------"
 
-	aws emr add-steps --cluster-id $clusterID --steps $step
+	aws2 emr add-steps --cluster-id $clusterID --steps $step
 
 done
 
@@ -115,7 +115,7 @@ do
 	echo $step
 	echo "-------------------------"
 
-	aws emr add-steps --cluster-id $clusterID --steps $step
+	aws2 emr add-steps --cluster-id $clusterID --steps $step
 
 done
 
@@ -152,7 +152,7 @@ do
 	echo $step
 	echo "-------------------------"
 
-	aws emr add-steps --cluster-id $clusterID --steps $step
+	aws2 emr add-steps --cluster-id $clusterID --steps $step
 
 done
 
@@ -189,7 +189,7 @@ do
 	echo $step
 	echo "-------------------------"
 
-	aws emr add-steps --cluster-id $clusterID --steps $step
+	aws2 emr add-steps --cluster-id $clusterID --steps $step
 
 done
 
@@ -226,7 +226,7 @@ do
 	echo $step
 	echo "-------------------------"
 
-	aws emr add-steps --cluster-id $clusterID --steps $step
+	aws2 emr add-steps --cluster-id $clusterID --steps $step
 
 done
 
@@ -283,7 +283,7 @@ do
 			echo $step
 			echo "-------------------------"
 
-			aws emr add-steps --cluster-id $clusterID --steps $step
+			aws2 emr add-steps --cluster-id $clusterID --steps $step
 		fi
 
 	done
