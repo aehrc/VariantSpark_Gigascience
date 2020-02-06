@@ -1,23 +1,29 @@
-#!/bin/bash 
-
-set x
+#!/bin/bash
 
 PEHNO=$1 # phenotype file
 GENO=$2  # genotype file
 LINES=$3 # line per batch
-OUTPUT=$4 
+OUTPUT=$4
 
+set -x
 cut -f 2 -d , $PEHNO > lbl
-
 split -l $LINES $GENO
+set +x
 
+echo "Transpose each part"
 for f in x*
 do
-	datamash transpose -t , < $f > $f.t
+        echo $f
+        datamash transpose -t , < $f > $f.t
 done
 
-paste x*.t | tr \\t , | cut -f 2-1000000000 -d , | paste lbl - | tr \\t , > $OUTPUT
+set -x
 
+paste x*.t | tr \\t , | cut -f 2-1000000000 -d , | paste lbl - | tr \\t , > $OUTPUT
 rm lbl x*
+
+/usr/bin/time -v  ranger --verbose --file $4 --depvarname lable --treetype 1 --ntree 100 --nthreads 8 --outprefix ranger.out 2>&1 | tee ranger.log
+
+/usr/bin/time -v  ranger --verbose --file $4 --depvarname lable --treetype 1 --ntree 100 --nthreads 8 --outprefix ranger.sm.out --savemem 2>&1 | tee ranger.sm.log
 
 exit
