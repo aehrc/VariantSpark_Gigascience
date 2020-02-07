@@ -31,7 +31,7 @@ rm lbl x*
 
 aws s3 cp $OUTPUT s3://variant-spark/GigaScience/Data/Ranger/
 
-bzcat $OUTPUT | tee >(bash Subset.sh $numSam 100 1) >(bash Subset.sh $numSam 200 1) >(bash Subset.sh $numSam 400 1) >(bash Subset.sh $numSam 800 1) >(bash Subset.sh $numSam 1600 2) >(bash Subset.sh $numSam 3200 2) >(bash Subset.sh $numSam 6400 2) >(bash Subset.sh $numSam 12800 2) >(bash Subset.sh $numSam 25600 2) >(bash Subset.sh $numSam 51200 2) >(bash Subset.sh $numSam 102400 4) >(bash Subset.sh $numSam 204800 4) >(bash Subset.sh $numSam 409600 4) >(bash Subset.sh $numSam 819200 8)  |  bash Subset.sh $numSam 1638400 16
+bzcat $OUTPUT | tee >(bash Subset.sh $numSam 100 1) >(bash Subset.sh $numSam 200 1) >(bash Subset.sh $numSam 400 1) >(bash Subset.sh $numSam 800 1) >(bash Subset.sh $numSam 1600 2) >(bash Subset.sh $numSam 3200 2) >(bash Subset.sh $numSam 6400 2) >(bash Subset.sh $numSam 12800 2) >(bash Subset.sh $numSam 25600 2) >(bash Subset.sh $numSam 51200 2) >(bash Subset.sh $numSam 102400 4) >(bash Subset.sh $numSam 204800 4) >(bash Subset.sh $numSam 409600 4) >(bash Subset.sh $numSam 819200 8) >(bash Subset.sh $numSam 1638400 8) >(bash Subset.sh $numSam 3276800 8) |  bash Subset.sh $numSam 6553600 8
 
 aws s3 cp --recursive ./ s3://variant-spark/GigaScience/Data/Ranger/
 
