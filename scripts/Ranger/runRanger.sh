@@ -18,3 +18,5 @@ do
     set +x
 done
 
+aws s3 cp --recursive --exclude "*" --include "ranger*" ./ s3://variant-spark/GigaScience/Data/Result_Ranger/
+
