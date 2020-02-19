@@ -10,13 +10,11 @@ OUTPUT=dataset.s$numSam.v$numVar.csv.bz2
 set -x
 aws s3 cp --recursive ./ s3://variant-spark/GigaScience/Data/Yggdrasil2/
 
-
-
 aws s3 cp s3://variant-spark/GigaScience/Data/VSdata/$PEHNO ./
 cat $PEHNO | cut -f 2 -d , | tail -n +2 | aws s3 cp - s3://variant-spark/GigaScience/Data/Yggdrasil2/pheno.csv
 
 
-cat $PHENO | cut -f 4,5,6,7,8 -d , | datamash transpose -t , > lbl
+cat $PEHNO | cut -f 4,5,6,7,8 -d , | datamash transpose -t , > lbl
 
 vname=$(head -n 1 $PEHNO | cut -f 4,5,6,7,8 -d , | sed 's/,/,|/g')
 echo $vname
