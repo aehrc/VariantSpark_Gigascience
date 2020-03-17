@@ -3,28 +3,28 @@
   "inputType": "csv",
   "dumpCSV": false,
   "shuffleSnps": true,
-  "outputPrefix": "cnf-01-run-1",
+  "outputPrefix": "cnf-09-run-3",
   "inputPrefix": "../PEPS_Genotypes/PEPS-1000Genome-Subset-A",
   "numTree": 500,
   "variables": [
     {
-      "numVar": 5,
+      "numVar": 500,
       "numSnpsInVar": 1
     },
     {
-      "numVar": 0,
+      "numVar": 250,
       "numSnpsInVar": 2
     },
     {
-      "numVar": 0,
+      "numVar": 167,
       "numSnpsInVar": 3
     },
     {
-      "numVar": 0,
+      "numVar": 125,
       "numSnpsInVar": 4
     },
     {
-      "numVar": 0,
+      "numVar": 100,
       "numSnpsInVar": 5
     }
   ]
