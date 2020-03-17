@@ -1,0 +1,31 @@
+{
+  "seed": 0,
+  "inputType": "csv",
+  "dumpCSV": false,
+  "shuffleSnps": true,
+  "outputPrefix": "cnf-01-run-1",
+  "inputPrefix": "../PEPS_Genotypes/PEPS-1000Genome-Subset-A",
+  "numTree": 500,
+  "variables": [
+    {
+      "numVar": 5,
+      "numSnpsInVar": 1
+    },
+    {
+      "numVar": 0,
+      "numSnpsInVar": 2
+    },
+    {
+      "numVar": 0,
+      "numSnpsInVar": 3
+    },
+    {
+      "numVar": 0,
+      "numSnpsInVar": 4
+    },
+    {
+      "numVar": 0,
+      "numSnpsInVar": 5
+    }
+  ]
+}
