@@ -1,4 +1,4 @@
-sample,cnf-01-run-1,cnf-01-run-2,cnf-01-run-3,cnf-02-run-1,cnf-02-run-2,cnf-02-run-3,cnf-03-run-1,cnf-03-run-2,cnf-03-run-3,cnf-04-run-1,cnf-04-run-2,cnf-04-run-3,cnf-05-run-1,cnf-05-run-2,cnf-05-run-3,cnf-06-run-1,cnf-06-run-2,cnf-06-run-3,cnf-07-run-1,cnf-07-run-2,cnf-07-run-3,cnf-08-run-1,cnf-08-run-2,cnf-08-run-3,cnf-09-run-1,cnf-09-run-2,cnf-09-run-3
+sample,cnf01run1,cnf01run2,cnf01run3,cnf02run1,cnf02run2,cnf02run3,cnf03run1,cnf03run2,cnf03run3,cnf04run1,cnf04run2,cnf04run3,cnf05run1,cnf05run2,cnf05run3,cnf06run1,cnf06run2,cnf06run3,cnf07run1,cnf07run2,cnf07run3,cnf08run1,cnf08run2,cnf08run3,cnf09run1,cnf09run2,cnf09run3
 HG00096,True,True,True,False,False,True,False,True,True,True,True,False,True,True,False,True,True,False,True,False,True,True,True,False,False,False,True
 HG00097,True,False,False,True,True,False,False,True,False,True,False,False,True,True,False,False,True,True,False,False,False,False,True,False,True,False,False
 HG00099,False,False,True,True,False,True,False,True,False,True,False,False,True,True,True,True,False,True,True,False,False,True,False,True,True,False,True
