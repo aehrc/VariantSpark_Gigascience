@@ -26,9 +26,9 @@ int rnd;
 
 int main(int argc, char *argv[])
 {
-    if (argc != 8)
+    if (argc != 9)
     {
-        printf("usage %s numSample batchSize numBatch varNamelen seed rate outFile\n", argv[0]);
+        printf("usage %s numSample batchSize numBatch varNamelen seed rate outFile jobNum\n", argv[0]);
         return 0;
     }
     uint32 numSample = atoi(argv[1]);
@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
     uint32 seed = atoi(argv[5]);
     uint32 rate = (atof(argv[6]) * 100000);
     char *outFile = argv[7];
+    uint32 job=atoi(argv[8]);
 
     FILE *of = fopen(outFile, "wb");
     NULL_CHECK(of);
@@ -46,7 +47,7 @@ int main(int argc, char *argv[])
     rnd = 0;
     char format[10];
     sprintf(format, "v_%%0%uu", varNameLen - 2);
-    uint32 vIdx = 0;
+    uint32 vIdx = batchSize*numBatch*job;
 
     // Write Header (sample ids)
     printf("varSam");
